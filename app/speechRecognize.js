@@ -5,23 +5,22 @@ window.SpeechRecognition =
 
 const falarBtn = document.getElementById('botao-falar')
 
-falarBtn.addEventListener('click', ()=>{
-    const recognition = new SpeechRecognition();
-    recognition.lang = 'pt-br'
-    recognition.start()
-    recognition.addEventListener('result', onSpeech)
+const recognition = new SpeechRecognition();
+recognition.lang = 'pt-br'
+recognition.start()
+recognition.addEventListener('result', onSpeech)
 
-    function onSpeech(e){
-    resultadoFala = e.results[0][0].transcript
+function onSpeech(e){
+resultadoFala = e.results[0][0].transcript
     
-    exibeNaTela(resultadoFala)
-    validaONumero(resultadoFala)
+exibeNaTela(resultadoFala)
+validaONumero(resultadoFala)
    
-    console.log(resultadoFala)
+console.log(resultadoFala)
     
 }
 
-})
+
 
 function exibeNaTela(resultadoFala){
     const numeroFalado = document.getElementById('#chute')
@@ -30,6 +29,8 @@ function exibeNaTela(resultadoFala){
     verificaOChute(resultadoFala)
 
 }
+
+recognition.addEventListener('end', recognition,start())
 
 
   
