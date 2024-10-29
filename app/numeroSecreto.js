@@ -1,3 +1,5 @@
+export { numeroSorteado }
+
 const menorValor = 1
 const maiorValor = 100
 
