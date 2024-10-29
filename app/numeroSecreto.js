@@ -2,6 +2,7 @@ export { numeroSorteado }
 
 const menorValor = 1
 const maiorValor = 100
+const numeroSorteado = sortearNumero()
 
 const elementoMenorValor = document.getElementById('menor-valor')
 elementoMenorValor.innerHTML = menorValor
@@ -13,7 +14,7 @@ function sortearNumero(){
     return parseInt(Math.random() * maiorValor + 1)
 }
 
-const numeroSorteado = sortearNumero()
+
 
 console.log(numeroSorteado)
 

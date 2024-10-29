@@ -1,7 +1,6 @@
 import { numeroSorteado } from "./numeroSecreto.js"
 
 function validaONumero(resultadoFala){
-    const numeroFalado = document.getElementById('#chute')
     const numero = +resultadoFala
     if (Number.isNaN(numero)){
         numeroFalado.innerHTML += `<div>O seu chute deve ser um número</div>`
